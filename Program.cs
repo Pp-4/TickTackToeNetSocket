@@ -65,17 +65,6 @@ namespace TickTackToeNetSocket
                 {
                     Server.Send(ResponseData, ResponseData.Length, new IPEndPoint(adresy.broadcast, 0));
                 }
-                /*while (true)
-                {
-                    //var ClientEp = new IPEndPoint(adresy.broadcast, 0);
-                    var ClientEp = new IPEndPoint(IPAddress.Any, 0);
-                    Console.WriteLine("test");
-                    var ClientRequestData = Server.Receive(ref ClientEp);
-                    var ClientRequest = Encoding.ASCII.GetString(ClientRequestData);
-
-                    Console.WriteLine("Recived {0} from {1}, sending response", ClientRequest, ClientEp.Address.ToString());
-                    Server.Send(ResponseData, ResponseData.Length, ClientEp);
-                }*/
             }
             catch (Exception e)
             {
